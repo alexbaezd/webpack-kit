@@ -67,7 +67,7 @@ module.exports = {
   plugins:[
     new CleanWebpackPlugin(),
     new HtmlWebPackPlugin({
-          template:"./src/index.html",
+          template:"./src/template.html",
           minify:{
             collapseWhitespace: true,
             removeComments: true,
