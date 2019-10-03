@@ -1,45 +1,40 @@
-$bg-primary:#78ca9e;
-$bg-second:#5485b6;
-
+$bg-primary: #78ca9e;
+$bg-second: #5485b6;
 
 @font-face {
-  font-family: 'googleicon';
-  src: url('../fonts/googleicon.eot');
-  src: url('../fonts/googleicon.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/googleicon.woff') format('woff'),
-       url('../fonts/googleicon.ttf') format('truetype'),
-       url('../fonts/googleicon.svg?#googleicon') format('svg');
+  font-family: "googleicon";
+  src: url("../fonts/googleicon.eot");
+  src: url("../fonts/googleicon.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/googleicon.woff") format("woff"),
+    url("../fonts/googleicon.ttf") format("truetype"),
+    url("../fonts/googleicon.svg?#googleicon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
-.logo-google{
-  margin-left:1em;
-			&::before{
-        color: $bg-second;					
-				content: "\f2b3";
-				font-size: 45px;
-				font-family: "googleicon";
-      }			
-}	
- 
-			
+.logo-google {
+  margin-left: 1em;
+  &::before {
+    color: $bg-second;
+    content: "\f2b3";
+    font-size: 45px;
+    font-family: "googleicon";
+  }
+}
+
 body {
-    
-   //background: $bg-primary;
-   background: {
-      image:url('../img/catalina.jpg');
-      repeat:no-repeat;
-      size:cover;
-   }
-   
-    
+  //background: $bg-primary;
+  background: {
+    image: url("../img/catalina.jpg");
+    repeat: no-repeat;
+    size: cover;
+  }
 }
 
-img{
-    width: 30%;
-    border-radius: 10px;
+img {
+  width: 30%;
+  border-radius: 10px;
 }
 
-h1{
-  color:black;
+h1 {
+  color: black;
 }
