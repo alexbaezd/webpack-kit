@@ -2,21 +2,15 @@ const path = require('path')
 const HtmlWebPackPlugin = require("html-webpack-plugin")
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
-const autoprefixer = require('autoprefixer')
 
 module.exports = {
-  entry: {
-    app: './src/index.js',
-  },
+  entry: { app: './src/index.js'},
   output:{
     path:path.resolve(__dirname,'dist'),
-    filename:'js/app.bundle.[contenthash].js'
+    filename:'app.bundle.[contenthash].js'
   },
-  devtool: 'source-map'
-  ,
-  devServer: {
-    open: 'Google Chrome'
-  },
+  devtool: 'source-map',
+  devServer: { open: 'Google Chrome'},
   module: {
     rules: [
       { 
@@ -37,6 +31,7 @@ module.exports = {
         test: /\.scss$/,
         use: [
           {loader: 'style-loader'},
+          {loader: MiniCssExtractPlugin.loader},
           {loader: 'css-loader'},
           {loader: 'resolve-url-loader'},
           {
@@ -66,8 +61,12 @@ module.exports = {
   },
   plugins:[
     new CleanWebpackPlugin(),
+    new MiniCssExtractPlugin({
+      filename: 'styles.bundle.[contenthash].css',
+      chunkFilename: '[id].css'
+    }),
     new HtmlWebPackPlugin({
-          template:"./src/index.html",
+          template:"./src/template.html",
           minify:{
             collapseWhitespace: true,
             removeComments: true,
