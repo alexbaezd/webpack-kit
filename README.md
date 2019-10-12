@@ -7,8 +7,8 @@ SASS y JavaScript moderno, funciones tipo flecha, importa tus módulos,async, aw
 ## Clona el repositorio
 
 ```
-git clone 
-cd
+git clone https://github.com/alexBaezD/webpack-kit.git
+cd  webpack-kit
 ```
 
 
